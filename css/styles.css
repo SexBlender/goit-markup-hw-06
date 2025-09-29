@@ -993,7 +993,8 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
-  .container {
+  .container,
+  .team > .container {
     width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1009,9 +1010,10 @@ button {
     padding-right: unset;
   }
 
-  .team > .container {
+  /* .team > .container {
     width: 100%;
-  }
+    width: 1158px;
+  } */
 
   .team {
     padding-bottom: 120px;
