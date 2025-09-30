@@ -177,9 +177,9 @@ button {
 }
 
 .header-contacts-link {
-  font-size: 16px;
+  /* font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; */
   color: #434455;
   transition-property: color;
   transition-duration: 250ms;
@@ -962,7 +962,7 @@ button {
 
   .header-navigation {
     display: flex;
-    padding: 24px 0;
+    /* padding: 24px 0; */
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -986,6 +986,12 @@ button {
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+
+  .header-contacts-link {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
   }
 
   .logo {
@@ -1139,6 +1145,13 @@ button {
 
   .header-contacts {
     margin-left: auto;
+  }
+
+  .header-contacts-link {
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 
   .header-contacts-list {
