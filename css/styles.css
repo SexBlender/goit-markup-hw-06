@@ -46,11 +46,10 @@ button {
   /* width: 1158px;
   padding-left: 15px;
   padding-right: 15px; */
-  width: 320px;
+  max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .section-title {
@@ -74,7 +73,8 @@ button {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
-  max-width: 1440px;
+  /* max-width: 1440px; */
+  width: 100%;
   margin: 0 auto;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
@@ -98,7 +98,9 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
+  /* margin-right: 76px; */
+  padding: 16px 0;
+  display: block;
 }
 
 .logo .logo-studio {
@@ -106,17 +108,18 @@ button {
 }
 
 .header-navigation {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 
 .header-menu-item {
 }
 
 .header-menu-list {
-  display: flex;
+  display: none;
+  /* display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 40px; */
 }
 
 .header-menu-link {
@@ -160,6 +163,7 @@ button {
 } */
 
 .header-contacts {
+  display: none;
   margin-left: auto;
 }
 
@@ -185,6 +189,12 @@ button {
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: #404bbf;
+}
+
+.burger-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 /* HERO */
@@ -490,12 +500,10 @@ button {
 /* FOOTER */
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.footer-logo {
-  display: inline-block;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-logo {
@@ -524,12 +532,15 @@ button {
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  /* align-items: baseline; */
 }
 
 .footer-left {
-  margin-right: 120px;
-  align-items: baseline;
+  /* margin-right: 120px; */
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 72px;
+  /* align-items: baseline; */
 }
 
 .footer-contacts {
@@ -578,6 +589,9 @@ button {
 }
 
 .footer-social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .footer-modal {
@@ -606,7 +620,8 @@ button {
 .footer-modal-input {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  /* width: 264px; */
+  width: 288px;
   height: 40px;
   font-size: 12px;
   line-height: 2;
@@ -926,9 +941,24 @@ button {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
-    padding-left: 16px;
-    padding-right: 16px;
+    max-width: 768px;
+  }
+
+  .header-logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+
+  .header-navigation {
+    display: block;
+    padding: 24px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .features {
@@ -974,7 +1004,7 @@ button {
   }
 
   .team-item {
-    flex-basis: calc((100% - 3 * 24px) / 4);
+    width: calc((100% - 24px) / 2);
   }
 
   .portfolio {
@@ -992,12 +1022,60 @@ button {
   }
 }
 
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer > .container {
+  width: 552px;
+  align-items: baseline;
+}
+
+.footer-left {
+  margin-right: 120px;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0;
+}
+
+.footer-social-media {
+  display: block;
+  flex-direction: initial;
+  gap: 0;
+}
+
+.footer-modal-input {
+  width: 264px;
+}
+
 @media screen and (min-width: 1158px) {
   .container,
-  .team > .container {
-    width: 1158px;
+  .team > .container,
+  .footer > .container {
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .header {
+    max-width: 1440px;
+  }
+
+  .logo {
+    margin-right: 76px;
+  }
+
+  .header-navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-menu-list {
+    display: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
   }
 
   .features-list {
@@ -1011,8 +1089,9 @@ button {
   }
 
   /* .team > .container {
-    width: 100%;
-    width: 1158px;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   } */
 
   .team {
@@ -1027,6 +1106,7 @@ button {
   }
 
   .team-list {
+    display: flex;
     gap: 24px;
   }
 
