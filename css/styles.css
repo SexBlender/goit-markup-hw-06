@@ -197,6 +197,11 @@ button {
   background-color: transparent;
 }
 
+.burger-icon {
+  display: block;
+  fill: #2f2f37;
+}
+
 /* HERO */
 .hero {
   background-color: #2e2f42;
@@ -944,21 +949,52 @@ button {
     max-width: 768px;
   }
 
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .header-logo {
     padding: 24px 0;
     margin-right: 120px;
   }
 
   .header-navigation {
-    display: block;
+    display: flex;
     padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
-
+    align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-menu-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header-contacts {
+    display: block;
+  }
+
+  .header-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo {
+    margin-right: 120px;
+    padding: 24px 0;
+  }
+
+  .burger-icon {
+    display: none;
   }
 
   .features {
@@ -1059,11 +1095,29 @@ button {
   }
 
   .header {
+    border-bottom: 1px solid #e7e9fc;
     max-width: 1440px;
+    margin: 0 auto;
+    /* padding: 0 24px; */
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  }
+
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-bottom: 24px;
+    padding-right: 24px; */
   }
 
   .logo {
     margin-right: 76px;
+    padding: 25px 0;
+  }
+
+  .footer .container {
+    display: flex;
   }
 
   .header-navigation {
@@ -1071,9 +1125,25 @@ button {
     align-items: center;
   }
 
+  .header-menu-item {
+  }
+
   .header-menu-list {
-    display: none;
     display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header-menu-link {
+  }
+
+  .header-contacts {
+    margin-left: auto;
+  }
+
+  .header-contacts-list {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 40px;
   }
