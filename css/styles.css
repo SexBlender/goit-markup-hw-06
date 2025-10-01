@@ -243,7 +243,7 @@ button {
   right: 24px;
 }
 
-.mobile-naviagation {
+.mobile-navigation {
   margin-bottom: auto;
 }
 
@@ -1084,7 +1084,7 @@ button {
   .hero {
     padding-bottom: 112px;
     padding-top: 112px;
-    min-width: 768px;
+    max-width: 768px;
   }
 
   .hero-title {
@@ -1155,11 +1155,11 @@ button {
   .footer {
     padding-top: 100px;
     padding-bottom: 100px;
-    max-width: 768px;
+    /* max-width: 768px; */
   }
 
   .footer > .container {
-    width: 768px;
+    max-width: 768px;
     align-items: baseline;
     flex-wrap: wrap;
   }
