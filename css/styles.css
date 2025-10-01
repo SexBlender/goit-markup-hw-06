@@ -256,7 +256,7 @@ button {
   padding-top: 72px;
   padding-bottom: 72px;
   /* max-width: 1440px; */
-  min-width: 320px;
+  max-width: 320px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -571,6 +571,9 @@ button {
   padding-bottom: 100px; */
   padding-top: 96px;
   padding-bottom: 96px;
+  width: 100%;
+  /* max-width: 320px; */
+  margin: 0 auto;
 }
 
 .footer-logo {
@@ -599,14 +602,19 @@ button {
 
 .footer-container {
   display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
   /* align-items: baseline; */
 }
 
 .footer-left {
   /* margin-right: 120px; */
-  flex-direction: column;
-  gap: 16px;
+  /* flex-direction: column; */
   margin-bottom: 72px;
+  text-align: center;
   /* align-items: baseline; */
 }
 
@@ -621,6 +629,7 @@ button {
   margin-bottom: 16px;
   letter-spacing: 0.02em;
   display: block;
+  text-align: center;
 }
 
 .footer-icon-wrapper {
@@ -658,7 +667,8 @@ button {
 .footer-social-media {
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 16px;
+  margin-bottom: 72px;
 }
 
 .footer-modal {
@@ -672,6 +682,7 @@ button {
 .footer-modal-form {
   display: flex;
   gap: 24px;
+  flex-direction: column;
 }
 
 .footer-modal-text {
@@ -682,6 +693,7 @@ button {
   margin-bottom: 16px;
   letter-spacing: 0.02em;
   display: block;
+  text-align: center;
 }
 
 .footer-modal-input {
@@ -1143,11 +1155,13 @@ button {
   .footer {
     padding-top: 100px;
     padding-bottom: 100px;
+    max-width: 768px;
   }
 
   .footer > .container {
-    width: 552px;
+    width: 768px;
     align-items: baseline;
+    flex-wrap: wrap;
   }
 
   .footer-left {
