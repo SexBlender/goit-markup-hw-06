@@ -350,7 +350,7 @@ button {
 }
 
 .features-item-cover {
-  display: flex;
+  display: none;
   padding-bottom: 24px;
   padding-top: 24px;
   padding-right: 100px;
@@ -368,14 +368,22 @@ button {
 .features-subtitle {
   text-align: center;
   padding-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
 }
 
 .features-text {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  max-width: 264px;
+  /* max-width: 264px; */
+  max-width: 288px;
 }
 
 /* TEAM */
@@ -503,6 +511,8 @@ button {
   /* width: calc((100% - 48px) / 3); */
   width: 100%;
   background-color: #fff;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   position: relative;
   overflow: hidden;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1086,13 +1096,11 @@ button {
   }
 
   .features-subtitle {
-    font-weight: 700;
-    font-size: 36px;
     text-align: left;
   }
 
   .features-text {
-    font-weight: 500;
+    max-width: 356px;
   }
 
   .team {
@@ -1131,33 +1139,33 @@ button {
   .portfolio-item {
     width: calc((100% - 24px) / 2);
   }
-}
 
-.footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
-.footer > .container {
-  width: 552px;
-  align-items: baseline;
-}
+  .footer > .container {
+    width: 552px;
+    align-items: baseline;
+  }
 
-.footer-left {
-  margin-right: 120px;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 0;
-}
+  .footer-left {
+    margin-right: 120px;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0;
+  }
 
-.footer-social-media {
-  display: block;
-  flex-direction: initial;
-  gap: 0;
-}
+  .footer-social-media {
+    display: block;
+    flex-direction: initial;
+    gap: 0;
+  }
 
-.footer-modal-input {
-  width: 264px;
+  .footer-modal-input {
+    width: 264px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1250,6 +1258,20 @@ button {
     padding-right: unset;
   }
 
+  .features-item-cover {
+    display: flex;
+  }
+
+  .features-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .features-text {
+    max-width: 264px;
+  }
+
   /* .team > .container {
     max-width: 100%;
     padding-left: 0;
@@ -1290,5 +1312,6 @@ button {
 
   .portfolio-item {
     width: calc((100% - 48px) / 3);
+    box-shadow: none;
   }
 }
