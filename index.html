@@ -325,16 +325,32 @@
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <div class="portfolio-item-cover">
-                <img
-                  class="portfolio-img"
-                  srcset="
-                    ./images/img-portf-1.jpg    1x,
-                    ./images/img-portf-1-2x.jpg 2x
-                  "
-                  src="./images/img-portf-1.jpg"
-                  alt="Banking App screens"
-                  width="360"
-                  height="300" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/img-portf-1-mob.jpg    1x,
+                      ./images/img-portf-1-2x-mob.jpg 2x
+                    "
+                    media="(max-width: 767px)" />
+                  <source
+                    srcset="
+                      ./images/img-portf-1-tab.jpg    1x,
+                      ./images/img-portf-1-2x-tab.jpg 2x
+                    "
+                    media="(min-width: 768px) and (max-width: 1157px)" />
+                  <source
+                    srcset="
+                      ./images/img-portf-1.jpg    1x,
+                      ./images/img-portf-1-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)" />
+                  <img
+                    class="portfolio-img"
+                    src="./images/img-portf-1.jpg"
+                    alt="Banking App screens"
+                    width="360"
+                    height="300" />
+                </picture>
                 <p class="portfolio-item-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
