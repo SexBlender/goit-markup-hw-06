@@ -548,6 +548,11 @@ button {
 
 .portfolio-subtitle {
   margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
 }
 
 .portfolio-text {
@@ -1160,25 +1165,56 @@ button {
 
   .footer > .container {
     max-width: 768px;
-    align-items: baseline;
+    /* align-items: baseline; */
     flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
   }
 
   .footer-left {
-    margin-right: 120px;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 0;
+    /* margin-right: 120px; */
+    /* flex-direction: row; */
+    /* align-items: baseline; */
+    /* gap: 0; */
+    margin-left: 108px;
+    margin-right: 24px;
+    margin-bottom: 0;
+    text-align: left;
   }
 
   .footer-social-media {
-    display: block;
-    flex-direction: initial;
-    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .footer-modal {
+    flex-basis: 100%;
+    margin-top: 72px;
+    margin-left: 108px;
   }
 
   .footer-modal-input {
     width: 264px;
+    flex: 1;
+    margin: 0;
+  }
+
+  .footer-modal-form {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .footer-btn-submit {
+    margin: 0;
+    min-width: 165px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .footer-modal-text {
+    text-align: left;
   }
 }
 
