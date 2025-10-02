@@ -270,6 +270,7 @@ button {
 .mobile-navigation {
   margin-bottom: auto;
   margin-top: 24px;
+  padding-left: 16px;
 }
 
 .mob-menu-list {
@@ -288,7 +289,7 @@ button {
 
 .mobile-menu .mob-menu-link {
   display: block;
-  padding-left: 16px;
+  padding-left: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -297,6 +298,7 @@ button {
 }
 
 .mobile-contacts {
+  padding-left: 16px;
 }
 
 .mobile-contacts-list {
@@ -313,6 +315,8 @@ button {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #434455;
+  display: block;
+  padding-left: 0;
 }
 
 .mobile-social {
